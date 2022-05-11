@@ -1,0 +1,13 @@
+@import "../../../styles/_vars";
+@import "../../../styles/_mixins";
+
+.t-login {
+  @include mode_flex(column, center, center);
+  @include padding-block($top: 6em, $bottom: 6em);
+  &__form {
+    @include mode_flex(column, center, center);
+    padding-top: 2em;
+    width: 100%;
+    max-width: 400px;
+  }
+}

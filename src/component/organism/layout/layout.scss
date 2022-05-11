@@ -17,4 +17,8 @@
       @include container;
     }
   }
+  &__cont {
+    @include mode_flex(column, flex-start, space-between);
+    overflow-y: auto;
+  }
 }

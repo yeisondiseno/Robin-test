@@ -1,0 +1,10 @@
+@import "../../../styles/_vars";
+@import "../../../styles/_mixins";
+
+.t-product {
+  @include padding-block($top: 0em, $bottom: 6em);
+  &__body {
+    @include mode_flex(row, flex-start, flex-start);
+    flex-wrap: wrap;
+  }
+}

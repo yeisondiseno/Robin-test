@@ -8,3 +8,7 @@
 @mixin container {
   padding: 3rem 2.5rem;
 }
+
+@mixin padding-block($top: 1em, $right: 6rem, $bottom: 1em, $left: 2.5em) {
+  padding: $top $right $bottom $left;
+}
