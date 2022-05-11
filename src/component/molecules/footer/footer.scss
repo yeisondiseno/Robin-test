@@ -1,0 +1,15 @@
+@import "../../../styles/_vars";
+@import "../../../styles/_mixins";
+
+.m-footer {
+  @include mode_flex(row, center, space-between);
+  @include padding-block;
+  background-color: $background-footer;
+  color: $white;
+  &__icons {
+    font-size: 1.4em;
+    svg {
+      margin-right: 0.5em;
+    }
+  }
+}
