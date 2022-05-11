@@ -4,6 +4,7 @@
 .m-footer {
   @include mode_flex(row, center, space-between);
   @include padding-block;
+  width: -webkit-fill-available;
   background-color: $background-footer;
   color: $white;
   &__icons {

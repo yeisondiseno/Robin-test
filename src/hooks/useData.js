@@ -8,6 +8,7 @@ export default function useData() {
     loading: false,
     users: [],
     stores: [],
+    userLogged: {},
   });
 
   console.log("isState", isState);
@@ -42,7 +43,14 @@ export default function useData() {
     const isUser = isState.users.filter((e) => e.email === user.email);
     const isValidateUser =
       isUser.length !== 0 && isUser[0].password === user.password;
-    console.log("isUser", isUser, isValidateUser);
+
+    isValidateUser &&
+      setIsState({
+        ...isState,
+        userLogged: isUser[0],
+      });
+
+    return isValidateUser;
   };
 
   useEffect(() => {

@@ -18,7 +18,7 @@ const Layout = (props) => {
           <Img src={pizzaImg} width="350" atl="Pizza" />
         </div>
       </section>
-      <section>{children}</section>
+      <section className="o-layout__cont">{children}</section>
     </main>
   );
 };

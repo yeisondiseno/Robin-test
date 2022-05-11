@@ -2,8 +2,26 @@
 @import "../../../styles/_mixins";
 
 .m-card {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+  padding: 0.5em;
+  background-color: $white;
+  text-align: left;
+  transition: 0.3s;
+  border: none;
+  border-radius: 11px;
+  cursor: pointer;
+  box-shadow: none;
+
+  &:hover {
+    box-shadow: $shadow;
+  }
+
   &__img {
     margin-bottom: 1em;
+  }
+
+  h4 {
+    margin-bottom: 0;
   }
 }

@@ -3,13 +3,13 @@ import "./card.scss";
 import Img from "../../atoms/img/Img";
 
 const Card = (props) => {
-  const { title = "", direction = "", image = "" } = props;
+  const { title = "", direction = "", image = false } = props;
   return (
-    <div className="m-card">
-      <Img src={image} alt={title} classes="m-card__img" />
+    <button className="m-card">
+      {image && <Img src={image} alt={title} classes="m-card__img" />}
       {title && <h4>{title}</h4>}
       {direction && <small>{direction}</small>}
-    </div>
+    </button>
   );
 };
 

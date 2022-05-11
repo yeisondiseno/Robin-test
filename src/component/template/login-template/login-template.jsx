@@ -26,9 +26,7 @@ const LoginTemplate = (props) => {
   const navigate = useNavigate();
 
   const onSubmit = (data) => {
-    console.log("data", data);
-    validateUser(data);
-    // navigate("/products");
+    validateUser(data) && navigate("/products");
   };
 
   return (
