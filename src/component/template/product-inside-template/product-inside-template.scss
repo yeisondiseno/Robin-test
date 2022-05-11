@@ -1,0 +1,24 @@
+@import "../../../styles/_vars";
+@import "../../../styles/_mixins";
+
+.t-product__inside {
+  @include padding-block($top: 4em, $bottom: 6em);
+  &__header {
+    @include mode_flex(row, center, flex-start);
+    h2 {
+      margin: 0;
+    }
+    p {
+      margin-bottom: 0;
+      margin-top: 0.5em;
+    }
+  }
+  &__header__text {
+    padding-left: 2em;
+  }
+  &__body {
+    @include mode_flex(row, flex-start, flex-start);
+    padding-top: 3em;
+    flex-wrap: wrap;
+  }
+}
