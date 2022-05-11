@@ -12,7 +12,18 @@ const Layout = (props) => {
     <main className="o-layout">
       <section className="o-layout__img">
         <header>
-          <Img src={logoWhiteImg} atl="Logo pizza" width="80" />
+          <Img
+            classes="o-layout__img__desk"
+            src={logoWhiteImg}
+            atl="Logo pizza"
+            width="80"
+          />
+          <Img
+            classes="o-layout__img__mobile"
+            src={logoWhiteImg}
+            atl="Logo pizza"
+            width="40"
+          />
         </header>
         <div className="o-layout__img__center">
           <Img src={pizzaImg} width="350" atl="Pizza" />

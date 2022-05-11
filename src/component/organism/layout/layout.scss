@@ -3,18 +3,44 @@
 
 .o-layout {
   display: grid;
-  grid-template-columns: minmax(400px, 40%) 1fr;
+  grid-template-columns: 1fr;
   height: 100vh;
+
+  @include from($break-md) {
+    grid-template-columns: minmax(400px, 40%) 1fr;
+  }
   &__img {
+    @include mode_flex(row, center, space-between);
     background-image: url("../../../assets/img/imagebkg.png");
     background-position: center;
     background-size: cover;
+
+    @include from($break-md) {
+      @include mode_flex(column, flex-start, flex-start);
+    }
     &__center {
-      @include mode_flex(row, center, center);
-      margin-top: 5em;
+      display: none;
+      @include from($break-md) {
+        @include mode_flex(row, center, center);
+      }
+      width: 100%;
     }
     header {
       @include container;
+      .o-layout__img__desk {
+        display: none;
+      }
+      .o-layout__img__mobile {
+        display: flex;
+      }
+      @include from($break-md) {
+        .o-layout__img__desk {
+          display: flex;
+        }
+        .o-layout__img__mobile {
+          display: none;
+        }
+      }
     }
   }
   &__cont {
