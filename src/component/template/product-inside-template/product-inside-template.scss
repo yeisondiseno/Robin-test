@@ -20,5 +20,8 @@
     @include mode_flex(row, flex-start, flex-start);
     padding-top: 3em;
     flex-wrap: wrap;
+    h3 {
+      min-width: 100%;
+    }
   }
 }

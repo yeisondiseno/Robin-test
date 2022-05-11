@@ -3,3 +3,14 @@
     background-position-x: -200%;
   }
 }
+
+@keyframes over-in {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}

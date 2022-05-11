@@ -4,6 +4,7 @@
 .t-login {
   @include mode_flex(column, center, center);
   @include padding-block($top: 6em, $bottom: 6em);
+  width: -webkit-fill-available;
   &__form {
     @include mode_flex(column, center, center);
     padding-top: 2em;

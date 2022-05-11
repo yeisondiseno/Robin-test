@@ -16,7 +16,11 @@ const Card = (props) => {
   };
 
   return (
-    <button className="m-card" onClick={() => goToProduct()}>
+    <button
+      className="m-card"
+      onClick={() => goToProduct()}
+      style={{ animationDelay: `0.${id}s` }}
+    >
       {image && (
         <Img src={image} alt={title} classes="m-card__img" width="200" />
       )}

@@ -42,8 +42,6 @@ export default function useData() {
     6: img12,
   };
 
-  console.log("isState", isState);
-
   // actions
   const getData = () => {
     setIsState({
