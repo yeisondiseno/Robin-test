@@ -1,0 +1,20 @@
+@import "../../../styles/_vars";
+@import "../../../styles/_mixins";
+
+.o-layout {
+  display: grid;
+  grid-template-columns: minmax(400px, 40%) 1fr;
+  height: 100vh;
+  &__img {
+    background-image: url("../../../assets/img/imagebkg.png");
+    background-position: center;
+    background-size: cover;
+    &__center {
+      @include mode_flex(row, center, center);
+      margin-top: 5em;
+    }
+    header {
+      @include container;
+    }
+  }
+}

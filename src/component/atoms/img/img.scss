@@ -1,0 +1,26 @@
+@import "../../../styles/_vars";
+@import "../../../styles/_mixins";
+@import "../../../styles/_animations";
+
+.a-img {
+  display: flex;
+  position: relative;
+  -moz-display: block ruby;
+  width: fit-content;
+  height: fit-content;
+  img {
+    display: flex;
+    width: 100%;
+    content-visibility: auto;
+  }
+  &__skeleton {
+    position: absolute;
+    top: 0;
+    background-color: $background-card;
+    background: linear-gradient(90deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+    background-size: 200% 100%;
+    border-radius: 0.6rem;
+    will-change: background;
+    animation: 1.5s skeleton-load linear infinite;
+  }
+}
