@@ -1,3 +1,5 @@
+@import "./_vars";
+
 @mixin mode_flex($direction, $align, $justify) {
   display: flex;
   flex-direction: $direction;
@@ -5,10 +7,22 @@
   justify-content: $justify;
 }
 
+@mixin from($size) {
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
 @mixin container {
-  padding: 3rem 2.5rem;
+  padding: 1rem 1rem;
+  @include from($break-md) {
+    padding: 3rem 2.5rem;
+  }
 }
 
 @mixin padding-block($top: 1em, $right: 6rem, $bottom: 1em, $left: 2.5em) {
-  padding: $top $right $bottom $left;
+  padding: $top 1rem $bottom 1rem;
+  @include from($break-md) {
+    padding: $top $right $bottom $left;
+  }
 }
