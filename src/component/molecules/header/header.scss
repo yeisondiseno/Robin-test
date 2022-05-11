@@ -1,0 +1,30 @@
+@import "../../../styles/_vars";
+@import "../../../styles/_mixins";
+
+.m-header {
+  @include mode_flex(row, center, space-between);
+  @include container;
+  width: -webkit-fill-available;
+
+  &__title span {
+    border-bottom: solid 2px $primary;
+    padding: 0.2em 0.8em;
+    color: $text-color;
+  }
+
+  button {
+    @include mode_flex(row, center, center);
+    background-color: transparent;
+    border: none;
+    border-radius: 0.6em;
+    padding: 0.8em;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+      background-color: lighten($color: $background-card, $amount: 10%);
+    }
+    svg {
+      margin-right: 0.6em;
+    }
+  }
+}

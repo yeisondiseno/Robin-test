@@ -5,6 +5,7 @@ import useData from "./hooks/useData";
 import Footer from "./component/molecules/footer/footer";
 // organism
 import Layout from "./component/organism/layout/layout";
+import Header from "./component/molecules/header/header";
 // pages
 import Login from "./component/pages/login";
 import Products from "./component/pages/products";
@@ -23,6 +24,7 @@ const App = () => {
             path="/products"
             element={
               <>
+                <Header title="Pizzerías" />
                 <Products {...state} />
                 <Footer />
               </>
@@ -32,6 +34,7 @@ const App = () => {
             path="/products/:store"
             element={
               <>
+                <Header goBack />
                 <ProductInside {...state} />
                 <Footer />
               </>

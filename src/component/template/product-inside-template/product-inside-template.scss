@@ -2,7 +2,7 @@
 @import "../../../styles/_mixins";
 
 .t-product__inside {
-  @include padding-block($top: 4em, $bottom: 6em);
+  @include padding-block($top: 0em, $bottom: 6em);
   &__header {
     @include mode_flex(row, center, flex-start);
     h2 {
