@@ -15,6 +15,7 @@
   color: $black;
   background: $primary;
   transition: 0.3s;
+  box-shadow: $shadow;
   cursor: pointer;
   &:hover {
     background-color: darken($color: $primary, $amount: 10%);
@@ -33,6 +34,7 @@
     height: auto;
     font-weight: bold;
     margin-bottom: 1em;
+    box-shadow: none;
     &:hover {
       text-decoration: underline;
       color: $text-color;

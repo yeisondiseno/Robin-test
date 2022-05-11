@@ -1,6 +1,6 @@
 // template
 import LoginTemplate from "../template/login-template/login-template";
 
-const Login = () => <LoginTemplate />;
+const Login = (props) => <LoginTemplate {...props} />;
 
 export default Login;

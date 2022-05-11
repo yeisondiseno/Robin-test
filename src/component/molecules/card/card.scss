@@ -1,0 +1,9 @@
+@import "../../../styles/_vars";
+@import "../../../styles/_mixins";
+
+.m-card {
+  margin-bottom: 1rem;
+  &__img {
+    margin-bottom: 1em;
+  }
+}

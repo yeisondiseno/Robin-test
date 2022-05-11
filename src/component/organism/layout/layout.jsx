@@ -5,7 +5,9 @@ import Img from "../../atoms/img/Img";
 import pizzaImg from "../../../assets/img/Pizza.png";
 import logoWhiteImg from "../../../assets/img/Logo.png";
 
-const Layout = ({ children }) => {
+const Layout = (props) => {
+  const { children } = props;
+
   return (
     <main className="o-layout">
       <section className="o-layout__img">

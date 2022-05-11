@@ -21,6 +21,7 @@ const Input = (props) => {
     icon,
     min,
     max,
+    required,
   } = props;
 
   const [fieldActive, setFieldActive] = useState(false);
@@ -68,7 +69,6 @@ const Input = (props) => {
         id={id}
         autoComplete={autoComplete ? "on" : "off"}
         onChange={change}
-        ref={register}
         onKeyDown={onKeyDown}
         placeholder={placeholder}
         name={name}
@@ -81,6 +81,9 @@ const Input = (props) => {
         onFocus={activateField}
         min={min}
         max={max}
+        {...register(name, {
+          required: { value: required, message: "Este campo es requerido." },
+        })}
       />
       {icon && <span className="a-input__icon">{icon}</span>}
       {errors && errors[name] && (
