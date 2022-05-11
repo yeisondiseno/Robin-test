@@ -41,7 +41,7 @@ const App = () => {
             }
           />
 
-          <Route path="**" element={<Login {...state} />} />
+          <Route path="*" element={<Login {...state} />} />
         </Routes>
       </Layout>
     </BrowserRouter>
