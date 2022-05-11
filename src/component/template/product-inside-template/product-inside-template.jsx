@@ -19,12 +19,14 @@ const ProductInsideTemplate = (props) => {
         </div>
       </header>
       <div className="t-product__inside__body">
+        <h3>Nuestros productos</h3>
         {data.products &&
           data.products.map((product) => (
             <CardProduct
               key={product.id}
               title={product.name}
               image={imageProduct[product.id]}
+              id={product.id}
             />
           ))}
       </div>

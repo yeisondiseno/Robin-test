@@ -1,5 +1,6 @@
 @import "../../../styles/_vars";
 @import "../../../styles/_mixins";
+@import "../../../styles/_animations";
 
 .m-card {
   margin-bottom: 1.5rem;
@@ -12,6 +13,11 @@
   border-radius: 11px;
   cursor: pointer;
   box-shadow: none;
+  opacity: 0;
+
+  animation-name: over-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
 
   &:hover {
     box-shadow: $shadow;

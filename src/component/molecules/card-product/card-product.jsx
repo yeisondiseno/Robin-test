@@ -5,10 +5,10 @@ import { useNavigate } from "react-router-dom";
 import Img from "../../atoms/img/Img";
 
 const CardProduct = (props) => {
-  const { title = "", direction = "", image = false } = props;
+  const { title = "", image = false, id } = props;
 
   return (
-    <div className="m-card-product">
+    <div className="m-card-product" style={{ animationDelay: `0.${id}s` }}>
       {image && (
         <Img
           src={image}

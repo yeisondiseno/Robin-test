@@ -21,7 +21,7 @@ const Header = (props) => {
         )}
         {title && <span>{title}</span>}
       </div>
-      <button>
+      <button onClick={() => navigate("/")}>
         <FontAwesomeIcon icon={faLock} />
         Salir
       </button>
